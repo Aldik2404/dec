@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the traditional national games of Kazakhstan - their history, rules, and cultural significance">
+    <title>National Games of Kazakhstan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" role="heading" aria-level="1">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" fill="#d4af37"/>
+                        <path d="M16 8L19 14H13L16 8Z" fill="white"/>
+                        <path d="M16 24L13 18H19L16 24Z" fill="white"/>
+                        <circle cx="16" cy="16" r="3" fill="#0099cc"/>
+                    </svg>
+                    <span>Kazakh National Games</span>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    🌙 Dark Mode
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" role="region" aria-label="Introduction">
+            <div class="container">
+                <h1>Traditional Games of Kazakhstan</h1>
+                <p>Discover the rich heritage of Kazakh sports and games, passed down through generations on the vast steppes of Central Asia</p>
+                <svg class="hero-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative illustration of traditional Kazakh patterns">
+                    <circle cx="100" cy="100" r="80" stroke="#0099cc" stroke-width="4" fill="none"/>
+                    <circle cx="100" cy="100" r="60" stroke="#d4af37" stroke-width="3" fill="none"/>
+                    <path d="M100 40 L110 70 L140 70 L115 90 L125 120 L100 100 L75 120 L85 90 L60 70 L90 70 Z" fill="#003d5c"/>
+                    <circle cx="100" cy="100" r="20" fill="#d4af37"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="controls" role="search" aria-label="Search and filter games">
+            <div class="container">
+                <div class="controls-inner">
+                    <input
+                        type="search"
+                        class="search-box"
+                        id="searchBox"
+                        placeholder="Search games by name or description..."
+                        aria-label="Search games"
+                    >
+                    <div class="filters" role="group" aria-label="Category filters">
+                        <button class="filter-btn active" data-category="all" aria-pressed="true">All Games</button>
+                        <button class="filter-btn" data-category="equestrian" aria-pressed="false">Equestrian</button>
+                        <button class="filter-btn" data-category="wrestling" aria-pressed="false">Wrestling</button>
+                        <button class="filter-btn" data-category="strategy" aria-pressed="false">Strategy</button>
+                        <button class="filter-btn" data-category="team" aria-pressed="false">Team Sports</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="games-grid" id="gamesGrid" role="region" aria-label="Games collection">
+            </div>
+            <div class="no-results hidden" id="noResults">
+                <h3>No games found</h3>
+                <p>Try adjusting your search or filters</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <button class="close-btn" id="closeModal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Preserving Cultural Heritage</h3>
+                <p>These traditional games represent the spirit, skill, and traditions of the Kazakh people across centuries.</p>
+
+                <div class="edit-guide">
+                    <h3>How to Edit This Page</h3>
+                    <p><strong>To add a new game:</strong> Find the <code>gamesData</code> array in the JavaScript section and add a new object with properties: name, description, category, era, difficulty, image, rules, equipment, and cultural.</p>
+                    <p><strong>To change colors:</strong> Modify the CSS variables at the top of the <code>:root</code> section.</p>
+                    <p><strong>To edit text:</strong> Update the content directly in the HTML sections or in the <code>gamesData</code> array.</p>
+                    <p>This is a self-contained HTML file - all code is in one place for easy editing!</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
